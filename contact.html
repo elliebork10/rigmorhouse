@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Rigmor House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAV BAR (Same as others) -->
+    <nav class="navbar">
+        <div class="nav-section left">
+            <a href="index.html">Home</a>
+            <a href="story.html">Our Story</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+        <div class="nav-logo">
+            <img src="https://placehold.jp/180x100.png?text=LOGO" alt="Logo">
+        </div>
+        <div class="nav-section right">
+            <a href="tour.html">Schedule Tour</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="content-page">
+        <section class="contact-container">
+            <h1>Contact Us</h1>
+            
+            <div class="contact-grid">
+                <!-- Column 1: Ben's Info & Address -->
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><strong>Address:</strong><br>
+                    Rigmor House<br>
+                    5501 NC Highway 54 West<br>
+                    Chapel Hill, NC 27516</p>
+
+                    <p><strong>Phone:</strong><br>
+                    <a href="tel:9199337177">919-933-7177</a></p>
+
+                    <p><strong>Email:</strong><br>
+                    <a href="mailto:benbork2@gmail.com">benbork2@gmail.com</a></p>
+                </div>
+
+                <!-- Column 2: The Inquiry Form -->
+                <div class="contact-form">
+                    <h3>Inquiry Form</h3>
+                    <form action="#" method="POST">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="contact">Email or Phone Number</label>
+                        <input type="text" id="contact" name="contact" required>
+
+                        <label for="event-type">Event Type</label>
+                        <select id="event-type" name="event-type">
+                            <option value="wedding">Wedding</option>
+                            <option value="corporate">Corporate</option>
+                            <option value="family">Family Reunion</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <label for="date">Ideal Date</label>
+                        <input type="date" id="date" name="date">
+
+                        <label for="message">Questions or Comments</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Updated Footer with Socials -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Rigmor House | Chapel Hill, NC</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/rigmorhouse/" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/rigmorhouse/" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
