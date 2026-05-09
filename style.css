@@ -212,4 +212,31 @@ h1, h2, h3 {
 
 .social-links i:hover {
     color: var(--gold);
+}.faq-content-wrapper {
+    display: flex;
+    align-items: flex-start; /* Keeps the questions at the top */
+    gap: 50px;              /* Space between questions and image */
+    margin-top: 40px;
+}
+
+.faq-list {
+    flex: 1; /* Takes up the left side */
+}
+
+.faq-image {
+    flex: 1; /* Takes up the right side */
+}
+
+.faq-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 15px 15px 0px var(--gold); /* Adds that modern design touch */
+}
+
+/* Mobile Fix: Stacks them back on top of each other for phones */
+@media (max-width: 768px) {
+    .faq-content-wrapper {
+        flex-direction: column;
+    }
 }
