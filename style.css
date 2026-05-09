@@ -126,4 +126,42 @@
     .nav-logo {
         order: -1; /* Puts logo at the top on mobile */
     }
+}.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes the 3 main sections apart */
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* This makes the left and right sections grow equally */
+.nav-section {
+    flex: 1; 
+    display: flex;
+    gap: 30px; /* This controls the even space BETWEEN the words */
+}
+
+/* This ensures the right-side links stay aligned to the right */
+.nav-section.right {
+    justify-content: flex-end;
+}
+
+/* This ensures the left-side links stay aligned to the left */
+.nav-section.left {
+    justify-content: flex-start;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Times New Roman', serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-logo img {
+    height: 100px; /* Keep this consistent */
+    display: block;
 }
