@@ -186,17 +186,33 @@ h1, h2, h3 {
     height: 300px;
     object-fit: cover;
     border-radius: 4px;
-}.story-row {
+/* Base row style */
+.story-row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 60px;
-    margin-bottom: 80px;
-    flex-direction: row; /* Default: Image Left, Text Right */
+    margin-bottom: 100px;
+    width: 100%;
 }
 
+/* The magic fix for reversing */
 .story-row.reverse {
-    flex-direction: row-reverse; /* Flips them */
-}.faq-page-layout {
+    flex-direction: row-reverse !important; /* !important ensures nothing overrides this */
+}
+
+/* Make sure image and text take up equal space */
+.story-image, .story-text {
+    flex: 1;
+    min-width: 300px; /* Prevents them from getting too skinny */
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}}.faq-page-layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 40px;
@@ -212,30 +228,7 @@ h1, h2, h3 {
 
 .social-links i:hover {
     color: var(--gold);
-}.faq-content-wrapper {
-    display: flex;
-    align-items: flex-start; /* Keeps the questions at the top */
-    gap: 50px;              /* Space between questions and image */
-    margin-top: 40px;
-}
 
-.faq-list {
-    flex: 1; /* Takes up the left side */
-}
-
-.faq-image {
-    flex: 1; /* Takes up the right side */
-}
-
-.faq-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 15px 15px 0px var(--gold); /* Adds that modern design touch */
-}
-
-/* Mobile Fix: Stacks them back on top of each other for phones */
-@media (max-width: 768px) {
     .faq-content-wrapper {
         flex-direction: column;
     }
